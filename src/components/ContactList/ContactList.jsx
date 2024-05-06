@@ -3,7 +3,7 @@ import Contact from "../Contact/Contact";
 import css from './ContactList.module.css'
 
 export default function ContactList() {
-  const initialContacts = useSelector(state => state.contatcs.items)
+  const initialContacts = useSelector(state => state.contacts.items)
   const filterParam = useSelector(state => state.filters.name)
   const filteredContacts = initialContacts.filter(contact => contact.name.toLowerCase().includes(filterParam.toLowerCase()))
     return (
